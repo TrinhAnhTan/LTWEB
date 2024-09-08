@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+	id="WebApp_ID" version="6.0">
+	<display-name>LTWEB01</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+
+	<!-- create cookie -->
+	<servlet>
+		<servlet-name>CreateCookie</servlet-name>
+		<servlet-class>vn.iotstar.CreateCookie</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateCookie</servlet-name>
+		<url-pattern>/CreateCookie</url-pattern>
+	</servlet-mapping>
+
+	<!-- read cookie -->
+	<servlet>
+		<servlet-name>ReadCookie</servlet-name>
+		<servlet-class>vn.iotstar.ReadCookie</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReadCookie</servlet-name>
+		<url-pattern>/ReadCookie</url-pattern>
+	</servlet-mapping>
+
+	<!-- delete cookie -->
+	<servlet>
+		<servlet-name>DeleteCookie</servlet-name>
+		<servlet-class>vn.iotstar.DeleteCookie</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteCookie</servlet-name>
+		<url-pattern>/DeleteCookie</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Create Session -->
+	<servlet>
+		<servlet-name>CreateSession</servlet-name>
+		<servlet-class>vn.iotstar.CreateSession</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateSession</servlet-name>
+		<url-pattern>/CreateSession</url-pattern>
+	</servlet-mapping>
+
+	<!-- Show Session -->
+	<servlet>
+		<servlet-name>ShowSession</servlet-name>
+		<servlet-class>vn.iotstar.ShowSession</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowSession</servlet-name>
+		<url-pattern>/ShowSession</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Http Session -->
+	<servlet>
+		<servlet-name>HttpSession</servlet-name>
+		<servlet-class>vn.iotstar.HttpSession</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HttpSession</servlet-name>
+		<url-pattern>/HttpSession</url-pattern>
+	</servlet-mapping>
+
+	<!-- Login Session -->
+	<servlet>
+		<servlet-name>LoginSession</servlet-name>
+		<servlet-class>vn.iotstar.LoginSession</servlet-class>
+	</servlet>
+	<session-config>
+		<session-timeout>15</session-timeout>
+	</session-config>
+	<servlet-mapping>
+		<servlet-name>LoginSession</servlet-name>
+		<url-pattern>/LoginSession</url-pattern>
+	</servlet-mapping>
+
+</web-app>
