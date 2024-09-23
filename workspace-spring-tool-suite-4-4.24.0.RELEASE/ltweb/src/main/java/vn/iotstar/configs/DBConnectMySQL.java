@@ -4,8 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import org.eclipse.jdt.internal.compiler.batch.Main;
-
 public class DBConnectMySQL {
 
 	private static String USERNAME = "anhtan";
