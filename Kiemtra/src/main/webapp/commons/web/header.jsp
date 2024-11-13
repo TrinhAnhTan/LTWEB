@@ -20,7 +20,7 @@
                 </ul>
                 <ul class="navbar-nav ms-auto"> <!-- Right-aligned links -->
                     <c:choose>
-                        <c:when test="${sessionScope.username != null}"> <!-- Khi người dùng đã đăng nhập -->
+                        <c:when test="${sessionScope.username != null}"> <!-- Khi người dùng đăng nhập -->
                             <c:if test="${sessionScope.role == 'admin'}">
                                 <li class="nav-item">
                                     <a class="nav-link" href="${pageContext.request.contextPath}/admin">Trang quản trị</a>
